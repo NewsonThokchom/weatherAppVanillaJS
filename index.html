@@ -6,8 +6,171 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="/css/app.css" />
+    <script
+      src="https://kit.fontawesome.com/a5d6defc09.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/slick-1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/slick-1.8.1/slick/slick-theme.css"
+    />
   </head>
+
   <body>
-    <main></main>
+    <main>
+      <header>
+        <h1>Weather App</h1>
+        <form class="search card">
+          <input
+            class="search-txt"
+            type="text"
+            name=""
+            placeholder="Search Location"
+          />
+
+          <a class="search-btn" href="#">
+            <i class="fas fa-search fa-1x"></i>
+          </a>
+        </form>
+      </header>
+
+      <section id="forecast-wrapper">
+        <article id="main-forecast" class="card">
+          <div id="left-col-forecast">
+            <p class="font-weight-400">Today</p>
+            <div class="degree-wrapper">
+              <p class="main-degree-text">21&deg C</p>
+
+              <i id="main_img" class="fas fa-cloud-sun-rain fa-4x"></i>
+            </div>
+
+            <p>Imphal, Manipur India</p>
+            <p>69.8&deg F</p>
+          </div>
+
+          <div id="right-col-forecast">
+            <p class="font-weight-400">20<sup>th</sup> Dec 2021 05:35 PM</p>
+            <p>Humidity - 56</p>
+            <p>Wind Direction - West</p>
+            <p>Wind Speed - 2.5mph (4kph)</p>
+            <p>UV - 6</p>
+          </div>
+        </article>
+
+        <aside class="slide">
+          <div class="card">
+            <p class="aside-day-location-text">Tuesday</p>
+            <div class="degree-wrapper">
+              <p class="aside-degree-text">21&deg C</p>
+
+              <i class="fas fa-cloud-sun-rain fa-2x"></i>
+            </div>
+
+            <p class="aside-day-location-text">Imphal, Manipur India</p>
+            <p class="aside-fahrenheit-text">69.8&deg F</p>
+          </div>
+
+          <div class="card">
+            <p class="aside-day-location-text">Wednesday</p>
+            <div class="degree-wrapper">
+              <p class="aside-degree-text">21&deg C</p>
+
+              <i class="fas fa-cloud-sun-rain fa-2x"></i>
+            </div>
+
+            <p class="aside-day-location-text">Imphal, Manipur India</p>
+            <p class="aside-fahrenheit-text">69.8&deg F</p>
+          </div>
+
+          <div class="card">
+            <p class="aside-day-location-text">Thursday</p>
+            <div class="degree-wrapper">
+              <p class="aside-degree-text">21&deg C</p>
+
+              <i class="fas fa-cloud-sun-rain fa-2x"></i>
+            </div>
+
+            <p class="aside-day-location-text">Imphal, Manipur India</p>
+            <p class="aside-fahrenheit-text">69.8&deg F</p>
+          </div>
+
+          <div class="card">
+            <p class="aside-day-location-text">Friday</p>
+            <div class="degree-wrapper">
+              <p class="aside-degree-text">21&deg C</p>
+
+              <i class="fas fa-cloud-sun-rain fa-2x"></i>
+            </div>
+
+            <p class="aside-day-location-text">Imphal, Manipur India</p>
+            <p class="aside-fahrenheit-text">69.8&deg F</p>
+          </div>
+
+          <div class="card">
+            <p class="aside-day-location-text">Friday</p>
+            <div class="degree-wrapper">
+              <p class="aside-degree-text">21&deg C</p>
+
+              <i class="fas fa-cloud-sun-rain fa-2x"></i>
+            </div>
+
+            <p class="aside-day-location-text">Imphal, Manipur India</p>
+            <p class="aside-fahrenheit-text">69.8&deg F</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="/slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(".slide").slick({
+        autoplay: false,
+        dots: false,
+        arrows: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
   </body>
 </html>
