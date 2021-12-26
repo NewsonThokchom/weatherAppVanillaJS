@@ -43,7 +43,7 @@
       <section id="forecast-wrapper">
         <article id="main-forecast" class="card">
           <div id="left-col-forecast">
-            <p class="font-weight-400">Today</p>
+            <p class="font-weight-">Today</p>
             <div class="degree-wrapper">
               <p class="main-degree-text">21&deg C</p>
 
@@ -51,15 +51,17 @@
             </div>
 
             <p>Imphal, Manipur India</p>
-            <p>69.8&deg F</p>
+            <h3 class="font-weight-400">69.8&deg F</h3>
           </div>
 
           <div id="right-col-forecast">
-            <p class="font-weight-400">20<sup>th</sup> Dec 2021 05:35 PM</p>
-            <p>Humidity - 56</p>
-            <p>Wind Direction - West</p>
-            <p>Wind Speed - 2.5mph (4kph)</p>
-            <p>UV - 6</p>
+            <h3 class="">20<sup>th</sup> Dec 2021 05:35 PM</h3>
+            <ul>
+              <li>Humidity - 56</li>
+              <li>Wind Direction - West</li>
+              <li>Wind Speed - 2.5mph (4kph)</li>
+              <li>UV - 6</li>
+            </ul>
           </div>
         </article>
 
@@ -138,7 +140,7 @@
     <script src="/slick-1.8.1/slick/slick.min.js"></script>
     <script>
       $(".slide").slick({
-        autoplay: false,
+        autoplay: true,
         dots: false,
         arrows: false,
         infinite: false,
